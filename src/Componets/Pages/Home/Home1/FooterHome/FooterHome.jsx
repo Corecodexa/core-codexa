@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import logo from "../../../../images/CompanyLogo.png";
 import {
   FaFacebookF,
   FaTwitter,
@@ -22,7 +21,7 @@ const FooterHome = () => {
               <div className="footer-about">
                 <div className="flex-shrink-0 w-16 h-16">
                   <Link to="/">
-                    <img src={logo} alt="Sky innovation logo" />
+                    <img src="/logo.jpg" alt="Sky innovation logo" />
                   </Link>
                 </div>
                 <p className=" text-sm">
