@@ -12,7 +12,7 @@ const AboutHome1 = () => {
         <div className="flex flex-wrap items-center">
           <div className="w-full lg:w-1/2 px-4">
             <div className="mb-8 lg:mb-0">
-              <h6 className="text-lg text-[#008bd0]">Core Codexa</h6>
+              <h6 className="text-lg text-[#e1651f]">Core Codexa</h6>
               <h2 className="text-4xl font-bold mt-4 ">
                 We design, develop, implement and support IT Systems{" "}
               </h2>
