@@ -8,6 +8,7 @@ import ScrollToTop from "react-scroll-to-top";
 import About from "./Componets/Pages/About/About";
 import TermAndConditions from "./Componets/Pages/Termandcondition/TermAndConditions";
 import PrivacyPolicy from "./Componets/Pages/PrivacyPolicy/PrivacyPolicy";
+import Team from "./Componets/Pages/OurTeam";
 function App() {
   return (
     <>
@@ -19,6 +20,7 @@ function App() {
           <Route path="/project" element={<Project />} />
           <Route path="/our-services" element={<ServiceSection />} />
           <Route path="/about" element={<About />} />
+          <Route path="/our-team" element={<Team />} />
           {/* <Route path='/view-service' element={<ServiceSection />} /> */}
           <Route path="/terms-condition" element={<TermAndConditions />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />

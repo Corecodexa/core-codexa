@@ -5,11 +5,12 @@ import {
   useMotionValue,
   useSpring,
 } from "framer-motion";
+import { useNavigate } from "react-router";
 
 const team = [
   {
     name: "Usama Joiya (C.E.O)",
-    role: "Full Stack WEB & App Developer",
+    role: "Full Stack Web & App Developer",
     image: "/images-team/usama.jpg",
   },
   {
@@ -47,7 +48,7 @@ const team = [
 const ROTATION_RANGE = 32.5;
 const HALF_ROTATION_RANGE = ROTATION_RANGE / 2;
 
-const TiltCard = ({ member }) => {
+const TiltCard = ({ member, click }) => {
   const ref = useRef(null);
   const x = useMotionValue(0);
   const y = useMotionValue(0);
@@ -85,7 +86,8 @@ const TiltCard = ({ member }) => {
         transformStyle: "preserve-3d",
         transform,
       }}
-      className="relative h-96 w-72 rounded-xl bg-gradient-to-br from-indigo-300 to-violet-300"
+      className="relative h-96 w-72 rounded-xl bg-gradient-to-br from-indigo-300 to-violet-300 cursor-pointer"
+      onClick={click}
     >
       <div
         style={{
@@ -118,8 +120,12 @@ const TiltCard = ({ member }) => {
 };
 
 const TeamShowcase = () => {
+  const navigate = useNavigate();
+  const handleClick = () => {
+    navigate("/our-team");
+  };
   return (
-    <div className="min-h-fit bg-gradient-to-br from-indigo-500 to-violet-500 px-6 py-16 text-slate-900">
+    <div className="min-h-fit bg-[linear-gradient(135deg,#609eae,#0c1824)] px-6 py-16 text-white max-w-[1536px] mx-auto">
       {/* Section Header */}
       <div className="text-center mb-16">
         <h2 className="text-4xl font-extrabold text-white drop-shadow-sm">
@@ -134,9 +140,9 @@ const TeamShowcase = () => {
       </div>
 
       {/* Team Cards */}
-      <div className="grid gap-5 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 place-items-center">
+      <div className="grid gap-y-10 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 place-items-center">
         {team.map((member, index) => (
-          <TiltCard key={index} member={member} />
+          <TiltCard key={index} member={member} click={handleClick} />
         ))}
       </div>
     </div>

@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { motion } from "framer-motion";
 
 const AboutSection = () => {
   useEffect(() => {
@@ -8,18 +9,23 @@ const AboutSection = () => {
   }, []);
 
   return (
-    <section className="about-area py-12 lg:px-16 font-ui-sans-serif">
+    <section className="about-area py-12 lg:px-16 font-ui-sans-serif bg-white">
       <div className="container mx-auto px-4">
-        <div className="flex flex-wrap items-center" data-aos="fade-right">
+        <motion.div
+          className="flex flex-wrap items-center"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+        >
           <div className="w-full lg:w-6/12 md:w-full">
             <div className="about-content">
-              <h6 className="text-lg font-semibold text-[#008bd0]">
+              <h6 className="text-lg font-semibold text-[#e1651f]">
                 CORE CODEXA
               </h6>
-              <h2 className="text-3xl lg:text-4xl font-bold mt-4">
+              <h2 className="text-3xl lg:text-4xl font-bold mt-4 text-[#0c1824]">
                 We design, develop, implement and support IT Systems
               </h2>
-              <p className="mt-4 text-gray-600">
+              <p className="mt-4 text-[#333]">
                 Core Codexa is a forward-thinking technology company dedicated
                 to delivering cutting-edge software solutions. We specialize in
                 creating innovative digital experiences through a blend of
@@ -29,85 +35,59 @@ const AboutSection = () => {
                 diverse business needs.
               </p>
               <div className="skills mt-6">
-                <div className="skill-item mb-4">
-                  <h6 className="flex justify-between items-center">
-                    IT Consulting <em className="text-gray-600">90%</em>
-                  </h6>
-                  <div className="w-full rounded-full h-2.5 mt-2">
-                    <div
-                      className="bg-[#008bd0] h-1.5 rounded-full"
-                      style={{ width: "90%" }}
-                    ></div>
+                {[
+                  { name: "IT Consulting", percent: 90 },
+                  { name: "Virtual Workstation", percent: 75 },
+                  { name: "Managed IT Service", percent: 80 },
+                ].map((skill, i) => (
+                  <div className="skill-item mb-4" key={i}>
+                    <h6 className="flex justify-between items-center">
+                      {skill.name}{" "}
+                      <em className="text-gray-600">{skill.percent}%</em>
+                    </h6>
+                    <div className="w-full bg-gray-200 rounded-full h-2.5 mt-2">
+                      <div
+                        className="bg-[#609eae] h-2 rounded-full"
+                        style={{ width: `${skill.percent}%` }}
+                      ></div>
+                    </div>
                   </div>
-                </div>
-                <div className="skill-item mb-4">
-                  <h6 className="flex justify-between items-center">
-                    Virtual Workstation <em className="text-gray-600">75%</em>
-                  </h6>
-                  <div className="w-full bg-gray-200 rounded-full h-2.5 mt-2">
-                    <div
-                      className="bg-[#008bd0] h-1.5 rounded-full"
-                      style={{ width: "75%" }}
-                    ></div>
-                  </div>
-                </div>
-                <div className="skill-item mb-4">
-                  <h6 className="flex justify-between items-center">
-                    Managed IT Service <em className="text-gray-600">80%</em>
-                  </h6>
-                  <div className="w-full bg-gray-200 rounded-full h-2.5 mt-2">
-                    <div
-                      className="bg-[#008bd0] h-1.5 rounded-full"
-                      style={{ width: "80%" }}
-                    ></div>
-                  </div>
-                </div>
+                ))}
               </div>
             </div>
           </div>
 
-          <div className="w-full lg:w-5/12 lg:ml-auto md:w-full mt-12 lg:mt-0">
-            <div className="contact-section bg-[#0070a7] border p-8 rounded-lg shadow-md">
+          <motion.div
+            className="w-full lg:w-5/12 lg:ml-auto md:w-full mt-12 lg:mt-0"
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1 }}
+          >
+            <div className="contact-section bg-[#0c1824] border border-[#e1651f] p-8 rounded-lg shadow-lg">
               <h3 className="text-2xl font-semibold text-white">
                 Free Consultation
               </h3>
               <div className="contact-form mt-6">
                 <form id="contact-form" className="form">
                   <div className="space-y-4">
-                    <div className="form-group">
-                      <input
-                        type="text"
-                        name="name"
-                        id="name"
-                        className="form-control w-full p-3 border bg-gray-200 border-gray-300 rounded"
-                        required
-                        placeholder="Your Name"
-                      />
-                    </div>
-                    <div className="form-group">
-                      <input
-                        type="email"
-                        name="email"
-                        id="email"
-                        className="form-control w-full p-3 border bg-gray-200 border-gray-300 rounded"
-                        required
-                        placeholder="Your Email"
-                      />
-                    </div>
-                    <div className="form-group">
-                      <input
-                        type="text"
-                        name="phone"
-                        id="phone"
-                        className="form-control w-full p-3 border bg-gray-200 border-gray-300 rounded"
-                        required
-                        placeholder="Your Phone"
-                      />
-                    </div>
+                    {["name", "email", "phone"].map((field, i) => (
+                      <div className="form-group" key={i}>
+                        <input
+                          type={field === "email" ? "email" : "text"}
+                          name={field}
+                          id={field}
+                          className="form-control w-full p-3 border border-gray-300 bg-white text-[#0c1824] rounded"
+                          required
+                          placeholder={`Your ${
+                            field.charAt(0).toUpperCase() + field.slice(1)
+                          }`}
+                        />
+                      </div>
+                    ))}
                     <div className="form-group">
                       <textarea
                         name="message"
-                        className="form-control w-full p-3 border bg-gray-200 border-gray-300 rounded"
+                        className="form-control w-full p-3 border border-gray-300 bg-white text-[#0c1824] rounded"
                         id="message"
                         cols="30"
                         rows="5"
@@ -116,7 +96,7 @@ const AboutSection = () => {
                       ></textarea>
                     </div>
                     <div className="form-group">
-                      <button className="btn btn-primary w-32 bg-[#121225] text-white py-3 rounded">
+                      <button className="w-32 bg-[#e1651f] hover:bg-[#d45716] text-white py-3 rounded transition-all duration-300">
                         Send Message
                       </button>
                     </div>
@@ -124,8 +104,8 @@ const AboutSection = () => {
                 </form>
               </div>
             </div>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </div>
     </section>
   );

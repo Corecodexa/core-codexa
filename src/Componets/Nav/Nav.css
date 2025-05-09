@@ -6,7 +6,7 @@ li::after {
   content: "";
   height: 10%;
   width: 0%;
-  background-color: #a95670;
+  background-color: #609eae;
   transition: 0.5s;
   bottom: 0;
   left: 0;

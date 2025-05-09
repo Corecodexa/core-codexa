@@ -16,10 +16,9 @@ import Hovimg2 from "./../../../images/projects-3.png";
 import Hovimg3 from "./../../../images/projects-4.png";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { Link, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
 
-// Card animation variants
 const cardVariants = {
   hidden: { opacity: 0, y: 30 },
   visible: (i) => ({
@@ -178,8 +177,10 @@ const ServicItem = () => {
         <div className="container mx-auto px-4">
           <div className="flex justify-center mb-8">
             <div className="text-center">
-              <h6 className="text-lg font-medium">What We Do</h6>
-              <h2 className="text-4xl font-bold">Our Services</h2>
+              <h6 className="text-lg font-medium text-[#fb923c]">What We Do</h6>
+              <h2 className="text-4xl font-bold text-[#0f172a]">
+                Our Services
+              </h2>
             </div>
           </div>
           <div className="flex flex-wrap -mx-4">
@@ -194,29 +195,29 @@ const ServicItem = () => {
                   whileHover={{
                     scale: 1.05,
                     y: -5,
-                    boxShadow: "0px 10px 20px rgba(0, 139, 208, 0.2)",
+                    boxShadow: "0px 10px 20px rgba(15, 23, 42, 0.3)",
                   }}
                   transition={{ type: "spring", stiffness: 300 }}
-                  className="group relative overflow-hidden bg-white border border-[#008bd0] p-6 rounded-lg flex flex-col h-full"
+                  className="group relative overflow-hidden bg-white border border-[#0f172a] p-6 rounded-lg flex flex-col h-full"
                 >
                   {/* Hover Background Image */}
                   <motion.div
-                    className="absolute inset-0 bg-cover bg-center bg-no-repeat transition-opacity duration-300 group-hover:opacity-30 opacity-0 z-0"
+                    className="absolute inset-0 bg-cover bg-center bg-no-repeat transition-opacity duration-300 group-hover:opacity-40 opacity-0 z-0"
                     style={{ backgroundImage: `url(${service.HovImg})` }}
                   />
 
                   {/* Icon */}
-                  <div className="relative z-10 flex items-center justify-center mb-4 w-16 h-16 rounded-full bg-[#008bd0] hover:bg-[#a95670] mx-auto">
+                  <div className="relative z-10 flex items-center justify-center mb-4 w-16 h-16 rounded-full bg-[#0f172a] group-hover:bg-[#fb923c] mx-auto">
                     <p className="text-white">{service.icon}</p>
                   </div>
 
                   {/* Title */}
-                  <h3 className="relative z-10 text-2xl font-semibold mb-4 text-center text-[#1e1e2f]">
+                  <h3 className="relative z-10 text-2xl font-semibold mb-4 text-center text-[#0f172a]">
                     {service.title}
                   </h3>
 
                   {/* Description */}
-                  <p className="relative z-10 text-gray-600 mb-4 text-center">
+                  <p className="relative z-10 text-gray-700 mb-4 text-center">
                     {service.description}
                   </p>
                 </motion.div>

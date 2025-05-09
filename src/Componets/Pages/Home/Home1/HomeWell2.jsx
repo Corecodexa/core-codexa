@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import backgroundImage2 from "./../../../images/frontimg2.png";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { Link } from "react-router-dom";
 
 const HomeWell2 = () => {
   useEffect(() => {
@@ -35,13 +36,17 @@ const HomeWell2 = () => {
           We are passionate about bringing enterprise-level productivity,
           scalability, and security to small and medium businesses.
         </p>
-        <div className="flex flex-col sm:flex-row sm:space-x-4 space-y-4 sm:space-y-0">
-          <button className="bg-[#008bd0] hover:bg-[#a95670] p-2 md:p-3 w-32 md:w-40 text-white rounded-full font-bold">
-            How Its Work
-          </button>
-          <button className="bg-[#008bd0] hover:bg-[#a95670] p-2 md:p-3 w-32 md:w-40 text-white rounded-full font-bold">
-            Contact Us
-          </button>
+        <div className="space-x-3">
+          <Link to="/contact">
+            <button className="bg-[#0c1824] hover:bg-[#609eae] p-2 md:p-3 w-32 md:w-40 text-white rounded-full font-bold transition-all">
+              Contact Us
+            </button>
+          </Link>
+          <Link to="/our-services">
+            <button className="bg-[#0c1824] hover:bg-[#609eae] p-2 md:p-3 w-32 md:w-40 text-white rounded-full font-bold">
+              Services
+            </button>
+          </Link>
         </div>
       </div>
     </div>

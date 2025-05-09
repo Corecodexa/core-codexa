@@ -6,3 +6,9 @@ body {
   background-color: #fafafa;
   color: black;
 }
+
+@theme {
+  --color-orange: #e1651f;
+  --color-navy: #0c1824;
+  --color-blue: #609eae;
+}

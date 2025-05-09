@@ -28,7 +28,7 @@ const Wellcome = () => {
           className="text-white font-ui-sans-serif font-bold text-xl md:text-4xl lg:text-5xl"
           data-aos="flip-up"
         >
-          Welcome To <span className="text-[#008bd0]"> Core Codexa </span>
+          Welcome To <span className="text-[#e1651f]"> Core Codexa </span>
           Think Build & Elevate
         </h1>
 
@@ -38,12 +38,12 @@ const Wellcome = () => {
         </h3>
         <div className="space-x-3">
           <Link to="/contact">
-            <button className="bg-[#008bd0] hover:bg-[#a95670] p-2 md:p-3 w-32 md:w-40 text-white rounded-full font-bold transition-all">
+            <button className="bg-[#0c1824] hover:bg-[#609eae] p-2 md:p-3 w-32 md:w-40 text-white rounded-full font-bold transition-all">
               Contact Us
             </button>
           </Link>
           <Link to="/our-services">
-            <button className="bg-[#008bd0] hover:bg-[#a95670] p-2 md:p-3 w-32 md:w-40 text-white rounded-full font-bold">
+            <button className="bg-[#0c1824] hover:bg-[#609eae] p-2 md:p-3 w-32 md:w-40 text-white rounded-full font-bold">
               Services
             </button>
           </Link>

@@ -9,18 +9,17 @@ const Navbar = () => {
 
   const toggleMenu = () => setIsOpen(!isOpen);
 
-  // Navigation Links Array
   const navLinks = [
     { path: "/", label: "Home" },
     { path: "/about", label: "About Us" },
     { path: "/our-services", label: "Service" },
     { path: "/project", label: "Project" },
-    { path: "/contact", label: "Contact" },
+    { path: "/our-team", label: "Team" },
   ];
 
   return (
     <header className="bg-[#fafafa] h-20 sticky z-40 top-0 shadow-md p-3">
-      <nav className="flex items-center justify-between max-w-screen-xl mx-auto h-full px-4 font-ui-sans-serif">
+      <nav className="flex items-center justify-between max-w-screen-xl mx-auto h-full sm:px-4 font-ui-sans-serif">
         {/* Logo */}
         <div className="flex-shrink-0">
           <Link to="/">
@@ -34,22 +33,22 @@ const Navbar = () => {
 
         {/* Mobile Menu Toggle */}
         <button
-          className="md:hidden flex items-center text-black hover:text-red-700 focus:text-[#f0db1b]"
+          className="md:hidden flex items-center text-black hover:text-[#e1651f] focus:text-[#f0db1b]"
           onClick={toggleMenu}
         >
           <div className="flex flex-col absolute right-5 gap-1 items-center">
             <section
-              className={` w-7 rounded h-1 origin-left transition-transform duration-300  bg-[#008bd0] ${
+              className={` w-7 rounded h-1 origin-left transition-transform duration-300  bg-[#e1651f] ${
                 isOpen ? "rotate-[45deg]" : "rotate-0"
               }`}
             ></section>
             <section
-              className={` w-7 rounded h-1  bg-[#008bd0] ${
+              className={` w-7 rounded h-1  bg-[#e1651f] ${
                 isOpen ? "opacity-0" : "opacity-100"
               }`}
             ></section>
             <section
-              className={` w-7 rounded h-1 origin-left transition-transform duration-300  bg-[#008bd0] ${
+              className={` w-7 rounded h-1 origin-left transition-transform duration-300  bg-[#e1651f] ${
                 isOpen
                   ? "rotate-[-45deg] translate-x-0 translate-y-1"
                   : "rotate-0"
@@ -75,7 +74,7 @@ const Navbar = () => {
                 <Link
                   onClick={() => setIsOpen(false)}
                   to={path}
-                  className="nav-link flex items-center  py-2 md:py-0 hover:text-[#008bd0] text-lg font-semibold"
+                  className="nav-link flex items-center  py-2 md:py-0 hover:text-[#e1651f] text-lg font-semibold"
                 >
                   {label}
                 </Link>
@@ -86,7 +85,7 @@ const Navbar = () => {
 
         {/* Join Us Button */}
         <div className="flex-shrink-0 hidden md:block">
-          <Link to={"/contact"} className="bg-[#a95670] text-white">
+          <Link to={"/contact"} className="bg-[#0c1824] text-white">
             <ShimmerButton text={"Contact us"} />
           </Link>
         </div>
