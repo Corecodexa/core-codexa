@@ -9,7 +9,7 @@ const AboutSection = () => {
   }, []);
 
   return (
-    <section className="about-area py-12 lg:px-16 font-ui-sans-serif bg-white">
+    <section className="about-area py-12 lg:px-16 font-ui-sans-serif bg-white overflow-hidden">
       <div className="container mx-auto px-4">
         <motion.div
           className="flex flex-wrap items-center"

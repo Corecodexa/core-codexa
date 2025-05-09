@@ -86,7 +86,7 @@ const TiltCard = ({ member, click }) => {
         transformStyle: "preserve-3d",
         transform,
       }}
-      className="relative h-96 w-72 rounded-xl bg-gradient-to-br from-indigo-300 to-violet-300 cursor-pointer"
+      className="relative h-96 w-72 rounded-xl bg-gradient-to-tr from-neutral-400 to-[#609eae] cursor-pointer"
       onClick={click}
     >
       <div
