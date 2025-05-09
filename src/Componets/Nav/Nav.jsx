@@ -22,9 +22,13 @@ const Navbar = () => {
     <header className="bg-[#fafafa] h-20 sticky z-40 top-0 shadow-md p-3">
       <nav className="flex items-center justify-between max-w-screen-xl mx-auto h-full px-4 font-ui-sans-serif">
         {/* Logo */}
-        <div className="flex-shrink-0 w-20 h-20">
+        <div className="flex-shrink-0">
           <Link to="/">
-            <img src="/logo.jpg" alt="Sky innovation logo" />
+            <img
+              src="/logo.png"
+              alt="Sky innovation logo"
+              className="w-40 object-cover"
+            />
           </Link>
         </div>
 

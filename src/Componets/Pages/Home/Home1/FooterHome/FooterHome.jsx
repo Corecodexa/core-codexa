@@ -19,9 +19,9 @@ const FooterHome = () => {
             {/* About Us Section */}
             <div className="lg:w-1/4 md:w-1/2 px-4 mb-8 lg:mb-0">
               <div className="footer-about">
-                <div className="flex-shrink-0 w-16 h-16">
+                <div className="flex-shrink-0 w-20 h-12">
                   <Link to="/">
-                    <img src="/logo.jpg" alt="Sky innovation logo" />
+                    <img src="/logo.png" alt="Sky innovation logo" />
                   </Link>
                 </div>
                 <p className=" text-sm">

@@ -29,7 +29,7 @@ const Wellcome = () => {
           data-aos="flip-up"
         >
           Welcome To <span className="text-[#008bd0]"> Core Codexa </span>
-          Turn Ideas Into Reality
+          Think Build & Elevate
         </h1>
 
         <h3 className="text-white text-sm md:text-lg font-ui-sans-serif lg:text-lg">
