@@ -9,10 +9,12 @@ import About from "./Componets/Pages/About/About";
 import TermAndConditions from "./Componets/Pages/Termandcondition/TermAndConditions";
 import PrivacyPolicy from "./Componets/Pages/PrivacyPolicy/PrivacyPolicy";
 import Team from "./Componets/Pages/OurTeam";
+import Scroll from "./Componets/Scroll";
 function App() {
   return (
     <>
       <BrowserRouter>
+        <Scroll />
         <Navbar />
         <Routes>
           <Route path="/" element={<Home1 />} />

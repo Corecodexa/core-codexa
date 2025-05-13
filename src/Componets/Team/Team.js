@@ -32,13 +32,19 @@ const TeamMember = ({ name, role, bio, image, socials }) => {
       {/* Right: Details */}
       <div className="md:w-2/3 w-full p-6 text-[#0c1824] flex flex-col justify-between gap-3">
         <div>
-          <h2 className="text-2xl font-bold text-[#405E98] mb-1">{name}</h2>
+          <h2 className="text-2xl font-bold text-[#405E98]">
+            {name?.split(",")[0]}
+          </h2>
+          <h3 className="text-2xl font-bold text-[#405E98]">
+            {name?.split(",")[1]}
+          </h3>
+
           <h3 className="text-lg font-semibold text-[#6c86c2] mb-2">{role}</h3>
           <p className="text-sm text-gray-700 leading-relaxed">{bio}</p>
         </div>
 
         <div className="flex space-x-5 mt-4 text-[#6c86c2] text-lg">
-          {socials.facebook && (
+          {socials?.facebook && (
             <a
               href={socials.facebook}
               target="_blank"
@@ -49,7 +55,7 @@ const TeamMember = ({ name, role, bio, image, socials }) => {
               <FaFacebookF />
             </a>
           )}
-          {socials.twitter && (
+          {socials?.twitter && (
             <a
               href={socials.twitter}
               target="_blank"
@@ -60,7 +66,7 @@ const TeamMember = ({ name, role, bio, image, socials }) => {
               <FaXTwitter />
             </a>
           )}
-          {socials.linkedin && (
+          {socials?.linkedin && (
             <a
               href={socials.linkedin}
               target="_blank"
@@ -71,7 +77,7 @@ const TeamMember = ({ name, role, bio, image, socials }) => {
               <FaLinkedinIn />
             </a>
           )}
-          {socials.instagram && (
+          {socials?.instagram && (
             <a
               href={socials.instagram}
               target="_blank"
