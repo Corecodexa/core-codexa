@@ -5,9 +5,6 @@ import ShimmerButton from "../Button/ShimmerButton";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const navRef = useRef(null);
-
-  const toggleMenu = () => setIsOpen(!isOpen);
 
   const navLinks = [
     { path: "/", label: "Home" },
@@ -18,56 +15,54 @@ const Navbar = () => {
   ];
 
   return (
-    // Updated color scheme version
-    <header className="bg-[#fafafa] h-20 sticky z-40 top-0 shadow-md p-3">
-      <nav className="flex items-center justify-between max-w-screen-xl mx-auto h-full sm:px-4 font-ui-sans-serif">
+    <header className="bg-[#fafafa] sticky top-0 z-50 shadow-md w-full">
+      <nav className="flex items-center justify-between max-w-screen-xl mx-auto px-4 h-20 font-ui-sans-serif">
         {/* Logo */}
         <div className="flex-shrink-0">
           <Link to="/">
             <img
               src="/logo1.png"
-              alt="Sky innovation logo"
-              className="w-20 object-cover"
+              alt="Sky Innovation Logo"
+              className="w-20 object-contain"
             />
           </Link>
         </div>
 
-        {/* Mobile Toggle */}
+        {/* Hamburger Button */}
         <button
-          onClick={toggleMenu}
-          className="md:hidden flex items-center text-[#405E98] hover:text-[#6c86c2]"
+          className="md:hidden flex flex-col justify-between w-8 h-6 relative z-50"
+          onClick={() => setIsOpen(!isOpen)}
+          aria-label="Toggle menu"
         >
-          <div className="flex flex-col absolute right-5 gap-1 items-center">
-            <span
-              className={`w-7 h-1 bg-[#405E98] rounded transition-transform duration-300 ${
-                isOpen ? "rotate-[45deg]" : ""
-              }`}
-            />
-            <span
-              className={`w-7 h-1 bg-[#405E98] rounded ${
-                isOpen ? "opacity-0" : ""
-              }`}
-            />
-            <span
-              className={`w-7 h-1 bg-[#405E98] rounded transition-transform duration-300 ${
-                isOpen ? "rotate-[-45deg] translate-y-1" : ""
-              }`}
-            />
-          </div>
+          <span
+            className={`h-1 w-full bg-[#405E98] rounded transition-transform duration-300 ${
+              isOpen ? "rotate-45 translate-y-2.5" : ""
+            }`}
+          />
+          <span
+            className={`h-1 w-full bg-[#405E98] rounded transition-opacity duration-300 ${
+              isOpen ? "opacity-0" : ""
+            }`}
+          />
+          <span
+            className={`h-1 w-full bg-[#405E98] rounded transition-transform duration-300 ${
+              isOpen ? "-rotate-45 -translate-y-2.5" : ""
+            }`}
+          />
         </button>
 
-        {/* Links */}
+        {/* Nav Links */}
         <ul
-          className={`flex flex-col md:flex-row md:space-x-8 space-y-4 md:space-y-0 absolute md:static ring-1 ring-white md:ring-0 w-full md:w-auto bg-[#fafafa] ${
-            isOpen ? "top-20" : "top-[-100vh]"
-          } duration-500 md:top-0 px-4 md:px-0`}
+          className={`fixed top-0 left-0 w-full h-screen bg-[#fafafa] flex flex-col items-center justify-center gap-6 text-lg text-[#405E98] font-semibold transform transition-transform duration-500 md:relative md:h-auto md:w-auto md:flex md:flex-row md:gap-8 md:bg-transparent md:translate-x-0 ${
+            isOpen ? "translate-x-0" : "-translate-x-full md:translate-x-0"
+          }`}
         >
           {navLinks.map(({ path, label }) => (
-            <li key={path} className="relative group">
+            <li key={path}>
               <Link
                 to={path}
+                className="hover:text-[#6c86c2] transition-colors"
                 onClick={() => setIsOpen(false)}
-                className="nav-link flex items-center py-2 md:py-0 hover:text-[#6c86c2] text-lg font-semibold text-[#405E98]"
               >
                 {label}
               </Link>
@@ -76,7 +71,7 @@ const Navbar = () => {
         </ul>
 
         {/* Contact Button */}
-        <div className="flex-shrink-0 hidden md:block">
+        <div className="hidden md:block">
           <Link to="/contact">
             <ShimmerButton text="Contact us" />
           </Link>
