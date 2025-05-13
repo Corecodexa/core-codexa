@@ -5,8 +5,6 @@
 body {
   background-color: #fafafa;
   color: black;
-  max-width: 1536px;
-  margin: auto;
 }
 
 @theme {
