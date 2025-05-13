@@ -109,6 +109,12 @@ const team = [
     image: "/images-team/harrisShehzad.jpg",
     bio: "Harris merges his expertise in trading and development to create efficient and data-driven digital platforms.",
   },
+  {
+    name: "Zara Hameed",
+    role: "Content Writer",
+    image: "/images-team/content.jpg",
+    bio: "Zara brings stories to life with words, creating impactful content that connects, informs, and inspires.",
+  },
 ];
 
 export default team;
