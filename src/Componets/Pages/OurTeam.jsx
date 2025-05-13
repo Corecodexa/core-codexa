@@ -176,7 +176,7 @@ const team = [
   {
     name: "Mubashir Khan",
     role: "UI/UX Designer",
-    image: "/images-team/Mubashir.jpg",
+    image: "/images-team/mubashir.jpg",
     bio: "Mubashir designs intuitive interfaces and user journeys that blend visual appeal with seamless functionality.",
     socials: {
       facebook: "https://facebook.com/mahnoor",
