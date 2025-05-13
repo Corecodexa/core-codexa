@@ -27,9 +27,9 @@ function App() {
         </Routes>
         <ScrollToTop
           smooth
-          color="#f29f67"
+          color="#ffffff"
           style={{
-            backgroundColor: "#1e1e2c",
+            backgroundColor: "#405E98",
             borderRadius: "80px",
             display: "grid",
             placeItems: "center",

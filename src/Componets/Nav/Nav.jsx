@@ -18,75 +18,67 @@ const Navbar = () => {
   ];
 
   return (
+    // Updated color scheme version
     <header className="bg-[#fafafa] h-20 sticky z-40 top-0 shadow-md p-3">
       <nav className="flex items-center justify-between max-w-screen-xl mx-auto h-full sm:px-4 font-ui-sans-serif">
         {/* Logo */}
         <div className="flex-shrink-0">
           <Link to="/">
             <img
-              src="/logo.png"
+              src="/logo1.png"
               alt="Sky innovation logo"
-              className="w-40 object-cover"
+              className="w-20 object-cover"
             />
           </Link>
         </div>
 
-        {/* Mobile Menu Toggle */}
+        {/* Mobile Toggle */}
         <button
-          className="md:hidden flex items-center text-black hover:text-[#e1651f] focus:text-[#f0db1b]"
           onClick={toggleMenu}
+          className="md:hidden flex items-center text-[#405E98] hover:text-[#6c86c2]"
         >
           <div className="flex flex-col absolute right-5 gap-1 items-center">
-            <section
-              className={` w-7 rounded h-1 origin-left transition-transform duration-300  bg-[#e1651f] ${
-                isOpen ? "rotate-[45deg]" : "rotate-0"
+            <span
+              className={`w-7 h-1 bg-[#405E98] rounded transition-transform duration-300 ${
+                isOpen ? "rotate-[45deg]" : ""
               }`}
-            ></section>
-            <section
-              className={` w-7 rounded h-1  bg-[#e1651f] ${
-                isOpen ? "opacity-0" : "opacity-100"
+            />
+            <span
+              className={`w-7 h-1 bg-[#405E98] rounded ${
+                isOpen ? "opacity-0" : ""
               }`}
-            ></section>
-            <section
-              className={` w-7 rounded h-1 origin-left transition-transform duration-300  bg-[#e1651f] ${
-                isOpen
-                  ? "rotate-[-45deg] translate-x-0 translate-y-1"
-                  : "rotate-0"
+            />
+            <span
+              className={`w-7 h-1 bg-[#405E98] rounded transition-transform duration-300 ${
+                isOpen ? "rotate-[-45deg] translate-y-1" : ""
               }`}
-            ></section>
+            />
           </div>
         </button>
 
-        {/* Navigation Items */}
-        <div
-          className={`flex-grow  flex items-center ${
-            isOpen ? "" : ""
-          } md:flex md:items-center md:justify-center`}
+        {/* Links */}
+        <ul
+          className={`flex flex-col md:flex-row md:space-x-8 space-y-4 md:space-y-0 absolute md:static ring-1 ring-white md:ring-0 w-full md:w-auto bg-[#fafafa] ${
+            isOpen ? "top-20" : "top-[-100vh]"
+          } duration-500 md:top-0 px-4 md:px-0`}
         >
-          <ul
-            ref={navRef}
-            className={`flex  flex-col md:flex-row md:space-x-8 md:space-y-0 space-y-4 absolute md:static ring-1 ring-white md:ring-0  md:bg-transparent w-full md:w-auto bg-[#fafafa] ${
-              isOpen ? "top-20 left-0" : "top-[-100vh] left-0"
-            } duration-500 w-screen md:top-0 px-4 md:px-0`}
-          >
-            {navLinks.map(({ path, label }) => (
-              <li key={path} className="relative group">
-                <Link
-                  onClick={() => setIsOpen(false)}
-                  to={path}
-                  className="nav-link flex items-center  py-2 md:py-0 hover:text-[#e1651f] text-lg font-semibold"
-                >
-                  {label}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </div>
+          {navLinks.map(({ path, label }) => (
+            <li key={path} className="relative group">
+              <Link
+                to={path}
+                onClick={() => setIsOpen(false)}
+                className="nav-link flex items-center py-2 md:py-0 hover:text-[#6c86c2] text-lg font-semibold text-[#405E98]"
+              >
+                {label}
+              </Link>
+            </li>
+          ))}
+        </ul>
 
-        {/* Join Us Button */}
+        {/* Contact Button */}
         <div className="flex-shrink-0 hidden md:block">
-          <Link to={"/contact"} className="bg-[#0c1824] text-white">
-            <ShimmerButton text={"Contact us"} />
+          <Link to="/contact">
+            <ShimmerButton text="Contact us" />
           </Link>
         </div>
       </nav>

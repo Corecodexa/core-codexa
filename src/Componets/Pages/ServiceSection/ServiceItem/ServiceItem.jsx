@@ -26,8 +26,8 @@ const cardVariants = {
     y: 0,
     transition: {
       delay: i * 0.1,
-      duration: 0.5,
-      ease: "easeOut",
+      duration: 0.3,
+      ease: "easeInOut",
     },
   }),
 };
@@ -172,20 +172,25 @@ const ServicItem = () => {
     location.pathname === "/" ? servicesData.slice(0, 6) : servicesData;
 
   return (
-    <div className="h-auto w-full">
+    <div className="h-auto w-full bg-[#f9fafb]">
       <section className="py-16 lg:px-10 font-ui-sans-serif">
         <div className="container mx-auto px-4">
-          <div className="flex justify-center mb-8">
+          {/* Heading */}
+          <div className="flex justify-center mb-12">
             <div className="text-center">
-              <h6 className="text-lg font-medium text-[#fb923c]">What We Do</h6>
-              <h2 className="text-4xl font-bold text-[#0f172a]">
+              <h6 className="text-md font-medium text-[#609eae] tracking-wide uppercase">
+                What We Do
+              </h6>
+              <h2 className="text-4xl font-bold text-[#0f172a] mt-2">
                 Our Services
               </h2>
             </div>
           </div>
+
+          {/* Service Cards */}
           <div className="flex flex-wrap -mx-4">
             {displayedServices.map((service, index) => (
-              <div key={index} className="w-full md:w-1/2 lg:w-1/3 px-4 mb-8">
+              <div key={index} className="w-full md:w-1/2 lg:w-1/3 px-4 mb-10">
                 <motion.div
                   custom={index}
                   initial="hidden"
@@ -195,29 +200,29 @@ const ServicItem = () => {
                   whileHover={{
                     scale: 1.05,
                     y: -5,
-                    boxShadow: "0px 10px 20px rgba(15, 23, 42, 0.3)",
+                    boxShadow: "0px 10px 20px rgba(15, 23, 42, 0.2)",
                   }}
-                  transition={{ type: "spring", stiffness: 300 }}
-                  className="group relative overflow-hidden bg-white border border-[#0f172a] p-6 rounded-lg flex flex-col h-full"
+                  transition={{ type: "spring", stiffness: 250 }}
+                  className="group relative overflow-hidden bg-white border border-[#0f172a] p-6 rounded-xl flex flex-col h-full transition-all"
                 >
-                  {/* Hover Background Image */}
+                  {/* Hover Background */}
                   <motion.div
-                    className="absolute inset-0 bg-cover bg-center bg-no-repeat transition-opacity duration-300 group-hover:opacity-40 opacity-0 z-0"
+                    className="absolute inset-0 bg-cover bg-center bg-no-repeat transition-opacity duration-300 group-hover:opacity-30 opacity-0 z-0"
                     style={{ backgroundImage: `url(${service.HovImg})` }}
                   />
 
                   {/* Icon */}
-                  <div className="relative z-10 flex items-center justify-center mb-4 w-16 h-16 rounded-full bg-[#0f172a] group-hover:bg-[#fb923c] mx-auto">
-                    <p className="text-white">{service.icon}</p>
+                  <div className="relative z-10 flex items-center justify-center mb-4 w-16 h-16 rounded-full bg-[#405E98] group-hover:bg-[#609eae] mx-auto transition-colors">
+                    <p className="text-white text-xl">{service.icon}</p>
                   </div>
 
                   {/* Title */}
-                  <h3 className="relative z-10 text-2xl font-semibold mb-4 text-center text-[#0f172a]">
+                  <h3 className="relative z-10 text-xl font-semibold mb-2 text-center text-[#0f172a] group-hover:text-[#609eae] transition-colors">
                     {service.title}
                   </h3>
 
                   {/* Description */}
-                  <p className="relative z-10 text-gray-700 mb-4 text-center">
+                  <p className="relative z-10 text-sm text-[#0f172a] text-center opacity-80 leading-relaxed">
                     {service.description}
                   </p>
                 </motion.div>

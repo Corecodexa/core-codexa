@@ -35,7 +35,7 @@ const WorkProcess = () => {
     <section className="py-16 font-ui-sans-serif">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h6 className="text-lg font-semibold text-[#fb923c]">
+          <h6 className="text-lg font-semibold text-[#2E518C]">
             3 Step Work Process
           </h6>
           <h2 className="text-3xl font-bold text-[#0f172a]">

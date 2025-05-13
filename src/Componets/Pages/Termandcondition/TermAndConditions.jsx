@@ -1,16 +1,16 @@
 const TermsAndConditions = () => {
   return (
-    <section className="px-4 py-12 font-ui-sans-serif text-[#0c1824]">
-      <div className="max-w-5xl mx-auto bg-white border border-[#609eae] shadow-2xl rounded-lg p-8 space-y-8">
-        <h1 className="text-3xl font-bold text-center text-[#e1651f]">
+    <section className="px-4 py-12 font-ui-sans-serif text-[#1c2636] bg-[#e8ecf5]">
+      <div className="max-w-5xl mx-auto bg-white border border-[#405E98] shadow-2xl rounded-lg p-8 space-y-8">
+        <h1 className="text-3xl font-bold text-center text-[#405E98]">
           Terms and Conditions
         </h1>
-        <p className="text-lg text-center text-[#609eae]">
+        <p className="text-lg text-center text-[#5c77b3]">
           Last updated: May 05, 2025
         </p>
 
         <section>
-          <h2 className="text-2xl font-semibold text-[#e1651f]">
+          <h2 className="text-2xl font-semibold text-[#405E98]">
             Acceptance of Terms
           </h2>
           <p>
@@ -21,7 +21,7 @@ const TermsAndConditions = () => {
         </section>
 
         <section>
-          <h2 className="text-2xl font-semibold text-[#e1651f]">
+          <h2 className="text-2xl font-semibold text-[#405E98]">
             Use of the Website
           </h2>
           <p>
@@ -32,7 +32,7 @@ const TermsAndConditions = () => {
         </section>
 
         <section>
-          <h2 className="text-2xl font-semibold text-[#e1651f]">
+          <h2 className="text-2xl font-semibold text-[#405E98]">
             Intellectual Property
           </h2>
           <p>
@@ -43,7 +43,7 @@ const TermsAndConditions = () => {
         </section>
 
         <section>
-          <h2 className="text-2xl font-semibold text-[#e1651f]">
+          <h2 className="text-2xl font-semibold text-[#405E98]">
             Limitation of Liability
           </h2>
           <p>
@@ -54,7 +54,7 @@ const TermsAndConditions = () => {
         </section>
 
         <section>
-          <h2 className="text-2xl font-semibold text-[#e1651f]">
+          <h2 className="text-2xl font-semibold text-[#405E98]">
             Third-Party Links
           </h2>
           <p>
@@ -64,7 +64,7 @@ const TermsAndConditions = () => {
         </section>
 
         <section>
-          <h2 className="text-2xl font-semibold text-[#e1651f]">
+          <h2 className="text-2xl font-semibold text-[#405E98]">
             Data Storage and Security
           </h2>
           <p>
@@ -75,14 +75,14 @@ const TermsAndConditions = () => {
         </section>
 
         <section>
-          <h2 className="text-2xl font-semibold text-[#e1651f]">
+          <h2 className="text-2xl font-semibold text-[#405E98]">
             Third-Party Services and Cookies
           </h2>
           <p>
             To provide an optimal experience, we may use third-party services
             that involve cookies or tracking technologies.
           </p>
-          <ul className="list-disc pl-6 text-[#0c1824] ">
+          <ul className="list-disc pl-6 text-[#1c2636]">
             <li>
               <span className="font-medium">Analytics Tools:</span> To
               understand user interactions and improve services.
@@ -99,13 +99,13 @@ const TermsAndConditions = () => {
         </section>
 
         <section>
-          <h2 className="text-2xl font-semibold text-[#e1651f]">User Duties</h2>
+          <h2 className="text-2xl font-semibold text-[#405E98]">User Duties</h2>
           <p>
             You agree to use the website in a lawful manner and refrain from
             activities that could harm or disrupt our services. Prohibited
             activities include:
           </p>
-          <ul className="list-disc pl-6 text-[#0c1824]">
+          <ul className="list-disc pl-6 text-[#1c2636]">
             <li>Misusing our services or website features.</li>
             <li>Engaging in unlawful activities, such as hacking or fraud.</li>
             <li>Distributing harmful or offensive content.</li>
@@ -113,7 +113,7 @@ const TermsAndConditions = () => {
         </section>
 
         <section>
-          <h2 className="text-2xl font-semibold text-[#e1651f]">
+          <h2 className="text-2xl font-semibold text-[#405E98]">
             Changes to Terms
           </h2>
           <p>
@@ -125,20 +125,20 @@ const TermsAndConditions = () => {
         </section>
 
         <section>
-          <h2 className="text-2xl font-semibold text-[#e1651f]">
+          <h2 className="text-2xl font-semibold text-[#405E98]">
             Contact Information
           </h2>
           <p>
             For questions or concerns regarding these Terms and Policies, please
             contact us:
           </p>
-          <ul className="pl-4 text-[#0c1824]">
-            <li>Address:Goheer Town, Bahawalpur</li>
+          <ul className="pl-4 text-[#1c2636]">
+            <li>Address: Goheer Town, Bahawalpur</li>
             <li>
               Email:
               <a
-                href="mailto:support@ideatech.ae"
-                className="text-[#e1651f] underline"
+                href="mailto:Corecodexa@gmail.com"
+                className="text-[#405E98] underline ml-1"
               >
                 Corecodexa@gmail.com
               </a>
@@ -146,12 +146,12 @@ const TermsAndConditions = () => {
           </ul>
         </section>
 
-        <p className="text-center text-xl text-[#0c1824]">
+        <p className="text-center text-xl text-[#1c2636]">
           © 2024 - All Rights Reserved -{" "}
-          <span className="font-semibold">CoreCodexa</span>
+          <span className="font-semibold text-[#405E98]">CoreCodexa</span>
         </p>
 
-        <p className="text-center text-base text-[#0c1824] mt-4">
+        <p className="text-center text-base text-[#1c2636] mt-4">
           Thank you for visiting our website!
         </p>
       </div>

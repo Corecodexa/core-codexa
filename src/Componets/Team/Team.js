@@ -6,9 +6,9 @@ import {
   FaLinkedinIn,
   FaInstagram,
 } from "react-icons/fa";
-
+import { FaXTwitter } from "react-icons/fa6";
 const socialIconClasses =
-  "transition-all duration-200 transform hover:scale-125 hover:text-[#e1651f]";
+  "transition-all duration-200 transform hover:scale-125 hover:text-[#405E98]";
 
 const TeamMember = ({ name, role, bio, image, socials }) => {
   return (
@@ -17,7 +17,7 @@ const TeamMember = ({ name, role, bio, image, socials }) => {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.6, ease: "easeOut" }}
-      className="flex flex-col md:flex-row items-center border border-[#e1651f] rounded-3xl overflow-hidden shadow-xl mb-10 bg-white hover:shadow-2xl transition-shadow duration-300 group"
+      className="flex flex-col md:flex-row items-center border border-[#405E98] rounded-3xl overflow-hidden shadow-xl mb-10 bg-white hover:shadow-2xl transition-shadow duration-300 group"
     >
       {/* Left: Image */}
       <div className="md:w-1/3 w-full h-[22rem] overflow-hidden relative">
@@ -32,12 +32,12 @@ const TeamMember = ({ name, role, bio, image, socials }) => {
       {/* Right: Details */}
       <div className="md:w-2/3 w-full p-6 text-[#0c1824] flex flex-col justify-between gap-3">
         <div>
-          <h2 className="text-2xl font-bold text-[#e1651f] mb-1">{name}</h2>
-          <h3 className="text-lg font-semibold text-[#609eae] mb-2">{role}</h3>
+          <h2 className="text-2xl font-bold text-[#405E98] mb-1">{name}</h2>
+          <h3 className="text-lg font-semibold text-[#6c86c2] mb-2">{role}</h3>
           <p className="text-sm text-gray-700 leading-relaxed">{bio}</p>
         </div>
 
-        <div className="flex space-x-5 mt-4 text-[#609eae] text-lg">
+        <div className="flex space-x-5 mt-4 text-[#6c86c2] text-lg">
           {socials.facebook && (
             <a
               href={socials.facebook}
@@ -57,7 +57,7 @@ const TeamMember = ({ name, role, bio, image, socials }) => {
               className={socialIconClasses}
               title="Twitter"
             >
-              <FaTwitter />
+              <FaXTwitter />
             </a>
           )}
           {socials.linkedin && (

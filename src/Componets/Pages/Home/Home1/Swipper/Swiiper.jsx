@@ -4,24 +4,23 @@ import "swiper/swiper-bundle.css";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/scrollbar";
-import "swiper/css/effect-fade"; // Include this if you're using fade effect
-import { Navigation, Autoplay, A11y } from "swiper/modules"; // Import Autoplay directly
+import "swiper/css/effect-fade";
+import { Navigation, Autoplay, A11y } from "swiper/modules";
 
 import Wellcome from "../Wellcome";
 import HomeWell2 from "../HomeWell2";
 import HomeWell3 from "../HomeWell3";
-import "./Style.css"; // Custom styles should come last
 
 const Swiiper = () => {
   return (
     <Swiper
-      modules={[Navigation, Autoplay, A11y]} // Include Autoplay in the modules list
+      modules={[Navigation, Autoplay, A11y]}
       spaceBetween={50}
       slidesPerView={1}
       navigation
       autoplay={{
-        delay: 4500, // Delay in ms
-        disableOnInteraction: false, // Continue autoplay after user interaction
+        delay: 4500,
+        disableOnInteraction: false,
       }}
     >
       <SwiperSlide>

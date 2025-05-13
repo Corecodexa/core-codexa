@@ -63,14 +63,14 @@ const WhyChooseUsHom1 = () => {
   }, []);
 
   return (
-    <section className="py-16 px-4 lg:px-10 bg-[#0c1824] text-white font-ui-sans-serif">
+    <section className="py-16 px-4 lg:px-10 bg-[#2e3e67] text-white font-ui-sans-serif">
       <div className="container mx-auto">
         <div className="text-center mb-12">
           <h6 className="text-lg">
-            <span className="text-[#e1651f] font-semibold">CoreCodexa</span> So
+            <span className="text-[#6b8cd9] font-semibold">CoreCodexa</span> So
             Different?
           </h6>
-          <h2 className="text-4xl font-bold text-[#609eae]">Why Trust Us?</h2>
+          <h2 className="text-4xl font-bold text-[#a7bdf1]">Why Trust Us?</h2>
         </div>
         <div className="flex flex-wrap -mx-4" data-aos="fade-right">
           {whyChooseData.map((item, index) => (
@@ -83,7 +83,7 @@ const WhyChooseUsHom1 = () => {
               whileInView="visible"
               viewport={{ once: true, amount: 0.2 }}
             >
-              <div className="p-6 h-full bg-white text-[#0c1824] border rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 border-[#609eae]">
+              <div className="p-6 h-full bg-white text-[#2e3e67] border rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 border-[#6b8cd9]">
                 <div className="mb-4">
                   <img
                     src={item.icon}
@@ -91,10 +91,10 @@ const WhyChooseUsHom1 = () => {
                     className="w-12 h-12 mx-auto rounded-full"
                   />
                 </div>
-                <h3 className="text-xl font-semibold mb-4 text-center text-[#e1651f]">
+                <h3 className="text-xl font-semibold mb-4 text-center text-[#405E98]">
                   {item.title}
                 </h3>
-                <p className="text-center text-[#4b5563]">{item.description}</p>
+                <p className="text-center text-[#4f6096]">{item.description}</p>
               </div>
             </motion.div>
           ))}

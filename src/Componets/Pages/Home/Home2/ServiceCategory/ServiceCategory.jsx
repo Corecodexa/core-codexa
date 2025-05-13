@@ -34,7 +34,7 @@ const ServicesCategory = () => {
         <div className="flex flex-wrap">
           <div className="w-full">
             <div className="section-title text-center mb-8">
-              <h6 className="text-[#fb923c] text-lg">Our Core Services</h6>
+              <h6 className="text-[#2E518C] text-lg">Our Core Services</h6>
               <h2 className="text-3xl text-[#0f172a] font-bold mt-2">
                 Explore IT Solutions
               </h2>

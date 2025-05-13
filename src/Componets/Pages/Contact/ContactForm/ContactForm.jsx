@@ -13,7 +13,7 @@ const ContactForm = () => {
     toast.success("Your message has been sent successfully!");
     setIsSending(false);
 
-    // Uncomment and configure to enable actual email sending
+    // Uncomment to enable actual email sending
     // emailjs
     //   .sendForm(
     //     "YOUR_SERVICE_ID",
@@ -28,9 +28,7 @@ const ContactForm = () => {
     //     },
     //     (error) => {
     //       setIsSending(false);
-    //       toast.error(
-    //         "There was an error sending your message. Please try again later."
-    //       );
+    //       toast.error("There was an error. Please try again later.");
     //     }
     //   );
   };
@@ -39,49 +37,47 @@ const ContactForm = () => {
     <section>
       <div className="mx-auto px-4 font-ui-sans-serif">
         <div className="text-center mb-20 mt-20">
-          <h6 className="text-lg font-semibold text-[#fb923c]">
+          <h6 className="text-lg font-semibold text-[#5d77b6]">
             LET’S GET TO WORK
           </h6>
-          <h2 className="text-3xl font-bold text-[#0f172a]">Contact Us</h2>
+          <h2 className="text-3xl font-bold text-[#405E98]">Contact Us</h2>
         </div>
 
         <div className="flex gap-4 flex-col lg:flex-row">
           {/* Left Image & Info */}
           <div className="lg:w-1/2 w-full mb-8 lg:mb-0">
-            <div className="border border-[#0f172a] shadow-2xl p-8 rounded-lg">
+            <div className="border border-[#405E98] shadow-2xl p-8 rounded-lg">
               <img
                 src={Contact1}
                 alt="Contact"
                 className="w-full h-auto mb-4 rounded-md"
               />
-              <p className="text-gray-700 mb-4">
+              <p className="text-black mb-4">
                 We provide free estimates via email or on-site visits. Our
                 estimates are completely free of charge! Simply fill out the
                 form or reach out to us at{" "}
                 <a
                   href="mailto:Corecodexa@gmail.com"
-                  className="text-[#fb923c] font-semibold"
+                  className="text-[#9ab1ea] font-semibold"
                 >
                   Corecodexa@gmail.com
                 </a>
                 , and provide your contact details and address.
               </p>
-              <p className="text-gray-700">
-                We look forward to hearing from you!
-              </p>
+              <p className="text-black">We look forward to hearing from you!</p>
             </div>
           </div>
 
           {/* Contact Form */}
           <div className="lg:w-1/2 w-full">
-            <div className="border border-[#0f172a] shadow-2xl rounded-lg p-8">
+            <div className="border border-[#405E98] shadow-2xl rounded-lg p-8">
               <form ref={form} onSubmit={sendEmail} className="space-y-4">
                 <div className="form-group">
                   <input
                     type="text"
                     name="user_name"
                     id="name"
-                    className="w-full p-3 border bg-gray-100 border-gray-300 rounded-md placeholder:text-gray-500"
+                    className="w-full p-3 border bg-[#f1f5ff] border-[#cfd8f5] rounded-md placeholder:text-[#7f93c8] text-[#405E98]"
                     required
                     placeholder="Your Name"
                   />
@@ -91,7 +87,7 @@ const ContactForm = () => {
                     type="email"
                     name="user_email"
                     id="email"
-                    className="w-full p-3 border bg-gray-100 border-gray-300 rounded-md placeholder:text-gray-500"
+                    className="w-full p-3 border bg-[#f1f5ff] border-[#cfd8f5] rounded-md placeholder:text-[#7f93c8] text-[#405E98]"
                     required
                     placeholder="Your Email"
                   />
@@ -100,7 +96,7 @@ const ContactForm = () => {
                   <textarea
                     name="message"
                     id="message"
-                    className="w-full p-3 border bg-gray-100 border-gray-300 rounded-md placeholder:text-gray-500"
+                    className="w-full p-3 border bg-[#f1f5ff] border-[#cfd8f5] rounded-md placeholder:text-[#7f93c8] text-[#405E98]"
                     cols="30"
                     rows="6"
                     required
@@ -110,7 +106,7 @@ const ContactForm = () => {
                 <div className="form-group">
                   <button
                     type="submit"
-                    className={`bg-[#0f172a] text-white px-6 py-3 rounded-md hover:bg-[#fb923c] transition duration-300 ${
+                    className={`bg-[#405E98] text-white px-6 py-3 rounded-md hover:bg-[#2f4776] transition duration-300 ${
                       isSending ? "cursor-not-allowed opacity-70" : ""
                     }`}
                     disabled={isSending}

@@ -19,7 +19,7 @@ const AboutSection = () => {
         >
           <div className="w-full lg:w-6/12 md:w-full">
             <div className="about-content">
-              <h6 className="text-lg font-semibold text-[#e1651f]">
+              <h6 className="text-lg font-semibold text-[#405E98]">
                 CORE CODEXA
               </h6>
               <h2 className="text-3xl lg:text-4xl font-bold mt-4 text-[#0c1824]">
@@ -47,7 +47,7 @@ const AboutSection = () => {
                     </h6>
                     <div className="w-full bg-gray-200 rounded-full h-2.5 mt-2">
                       <div
-                        className="bg-[#609eae] h-2 rounded-full"
+                        className="bg-[#405E98] h-2 rounded-full"
                         style={{ width: `${skill.percent}%` }}
                       ></div>
                     </div>
@@ -63,7 +63,7 @@ const AboutSection = () => {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 1 }}
           >
-            <div className="contact-section bg-[#0c1824] border border-[#e1651f] p-8 rounded-lg shadow-lg">
+            <div className="contact-section bg-[#0c1824] border border-[#405E98] p-8 rounded-lg shadow-lg">
               <h3 className="text-2xl font-semibold text-white">
                 Free Consultation
               </h3>
@@ -96,7 +96,7 @@ const AboutSection = () => {
                       ></textarea>
                     </div>
                     <div className="form-group">
-                      <button className="w-32 bg-[#e1651f] hover:bg-[#d45716] text-white py-3 rounded transition-all duration-300">
+                      <button className="w-32 bg-[#405E98] hover:bg-[#2e4979] text-white py-3 rounded transition-all duration-300">
                         Send Message
                       </button>
                     </div>

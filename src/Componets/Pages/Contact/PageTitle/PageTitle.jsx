@@ -4,13 +4,15 @@ import "aos/dist/aos.css";
 import PageTit from "./../../../images/bg3.jpg";
 import { Link } from "react-router-dom";
 import { IoIosArrowForward } from "react-icons/io";
+
 const PageTitle = ({ title, Sub }) => {
   useEffect(() => {
-    AOS.init({ duration: 2000 });
+    AOS.init({ duration: 1500 });
   }, []);
+
   return (
     <div
-      className="bg-[#162466] py-32 font-ui-sans-serif "
+      className="relative py-32 text-white"
       style={{
         backgroundImage: `url(${PageTit})`,
         backgroundSize: "cover",
@@ -18,28 +20,29 @@ const PageTitle = ({ title, Sub }) => {
         backgroundRepeat: "no-repeat",
       }}
     >
-      <div
-        className="absolute top-[80px] h-[20rem] inset-0 bg-[#121225] opacity-50 "
-        aria-hidden="true"
-      ></div>
-      <div
-        className="flex  flex-col items-center justify-center"
-        data-aos="fade-right"
-      >
-        <div className="flex  space-x-5">
-          <h1 className="text-white text-3xl font-bold font-ui-sans-serif">
-            {title}
-          </h1>
-        </div>
-        <div className='flex  justify-center" data-aos="fade-right"'>
-          <div className="flex">
-            <Link to="/" className="text-[#e1651f] px-3 ">
-              Home
-            </Link>
+      {/* Dark overlay */}
+      <div className="absolute inset-0 bg-[#1c2c50]/80" />
 
-            <IoIosArrowForward size={20} className="mt-1 text-white" />
-          </div>
-          <Link className="text-[#e1651f] px-3 ">{Sub}</Link>
+      {/* Content */}
+      <div
+        className="relative z-10 flex flex-col items-center text-center px-4"
+        data-aos="fade-up"
+      >
+        <h1 className="text-4xl md:text-5xl font-bold font-ui-sans-serif text-white drop-shadow-lg">
+          {title}
+        </h1>
+
+        {/* Breadcrumb */}
+        <div
+          className="flex items-center gap-2 mt-4 text-sm md:text-base text-white"
+          data-aos="fade-up"
+          data-aos-delay="200"
+        >
+          <Link to="/" className="text-[#405E98] hover:underline font-medium">
+            Home
+          </Link>
+          <IoIosArrowForward className="text-white" size={18} />
+          <span className="text-[#405E98] font-medium">{Sub}</span>
         </div>
       </div>
     </div>

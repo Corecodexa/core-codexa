@@ -38,12 +38,12 @@ const HomeWell3 = () => {
         </p>
         <div className="space-x-3">
           <Link to="/contact">
-            <button className="bg-[#0c1824] hover:bg-[#609eae] p-2 md:p-3 w-32 md:w-40 text-white rounded-full font-bold transition-all">
+            <button className="bg-[#0c1824] hover:bg-[#405E98] hover:scale-105 transform p-2 md:p-3 w-32 md:w-40 text-white rounded-full font-semibold transition-all duration-300">
               Contact Us
             </button>
           </Link>
           <Link to="/our-services">
-            <button className="bg-[#0c1824] hover:bg-[#609eae] p-2 md:p-3 w-32 md:w-40 text-white rounded-full font-bold">
+            <button className="bg-[#0c1824] hover:bg-[#405E98] hover:scale-105 transform p-2 md:p-3 w-32 md:w-40 text-white rounded-full font-semibold transition-all duration-300">
               Services
             </button>
           </Link>
