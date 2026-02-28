@@ -53,7 +53,7 @@ const cardVariants = {
   visible: (i) => ({
     opacity: 1,
     y: 0,
-    transition: { delay: i * 0.2, duration: 0.6, ease: "easeOut" },
+    transition: { delay: i * 0.15, duration: 0.8, ease: "easeOut" },
   }),
 };
 
@@ -63,39 +63,58 @@ const WhyChooseUsHom1 = () => {
   }, []);
 
   return (
-    <section className="py-16 px-4 lg:px-10 bg-[#2e3e67] text-white font-ui-sans-serif">
+    <section className="py-24 px-4 lg:px-16 bg-[#2e3e67] font-ui-sans-serif">
       <div className="container mx-auto">
-        <div className="text-center mb-12">
-          <h6 className="text-lg">
-            <span className="text-[#6b8cd9] font-semibold">CoreCodexa</span> So
-            Different?
+        {/* Heading */}
+        <div className="text-center mb-16 text-white">
+          <h6 className="text-lg lg:text-xl tracking-wide uppercase">
+            <span className="text-[#6b8cd9] font-semibold">CoreCodexa</span> So Different?
           </h6>
-          <h2 className="text-4xl font-bold text-[#a7bdf1]">Why Trust Us?</h2>
+          <h2 className="text-4xl lg:text-5xl font-extrabold mt-3 leading-tight">
+            Why Trust Us?
+          </h2>
         </div>
-        <div className="flex flex-wrap -mx-4" data-aos="fade-right">
+
+        {/* Cards */}
+        <div className="flex flex-wrap -mx-4" data-aos="fade-up">
           {whyChooseData.map((item, index) => (
             <motion.div
               key={index}
-              className="w-full lg:w-1/3 md:w-1/2 px-4 mb-8"
+              className="w-full md:w-1/2 lg:w-1/3 px-4 mb-8"
               custom={index}
               variants={cardVariants}
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, amount: 0.2 }}
             >
-              <div className="p-6 h-full bg-white text-[#2e3e67] border rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 border-[#6b8cd9]">
-                <div className="mb-4">
+              <motion.div
+                whileHover={{
+                  scale: 1.05,
+                  y: -5,
+                  boxShadow: "0 25px 50px rgba(0,0,0,0.25)",
+                }}
+                transition={{ type: "spring", stiffness: 180, damping: 20 }}
+                className="p-8 h-full bg-white rounded-3xl shadow-lg flex flex-col items-center text-center cursor-pointer transition-all duration-1000 hover:bg-gradient-to-r hover:from-[#0c1824] hover:to-[#405E98] group"
+              >
+                {/* Icon */}
+                <div className="mb-6 w-20 h-20 rounded-full bg-[#405E98] group-hover:bg-white flex items-center justify-center shadow-md transition-colors duration-1000">
                   <img
                     src={item.icon}
                     alt="icon"
-                    className="w-12 h-12 mx-auto rounded-full"
+                    className="w-12 h-12 object-cover rounded-full transition-colors duration-1000 group-hover:invert"
                   />
                 </div>
-                <h3 className="text-xl font-semibold mb-4 text-center text-[#405E98]">
+
+                {/* Title */}
+                <h3 className="text-xl lg:text-2xl font-bold mb-4 text-[#405E98] group-hover:text-white transition-colors duration-1000">
                   {item.title}
                 </h3>
-                <p className="text-center text-[#4f6096]">{item.description}</p>
-              </div>
+
+                {/* Description */}
+                <p className="text-[#4f6096] group-hover:text-white text-sm lg:text-base leading-relaxed transition-colors duration-1000">
+                  {item.description}
+                </p>
+              </motion.div>
             </motion.div>
           ))}
         </div>

@@ -8,65 +8,80 @@ const workSteps = [
     title: "Discover",
     description:
       'The "Discover" feature is designed to help you explore and find new job opportunities effortlessly.',
-    color: "bg-[#0f172a]",
   },
   {
     number: 2,
     title: "Design & Build",
     description:
       'The "Design and Build" feature empowers you to create and customize your ideal job search experience.',
-    color: "bg-[#0f172a]",
   },
   {
     number: 3,
     title: "Deliver",
     description:
       'The "Deliver" feature ensures that your job search or application process is completed effectively and on time.',
-    color: "bg-[#0f172a]",
   },
 ];
 
 const WorkProcess = () => {
   useEffect(() => {
-    AOS.init({ duration: 2000 });
+    AOS.init({ duration: 1200, once: true });
   }, []);
 
   return (
-    <section className="py-16 font-ui-sans-serif">
+    <section className="py-24 bg-gradient-to-br from-[#0f172a] via-[#1e293b] to-[#020617] text-white font-ui-sans-serif">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <h6 className="text-lg font-semibold text-[#2E518C]">
-            3 Step Work Process
-          </h6>
-          <h2 className="text-3xl font-bold text-[#0f172a]">
-            Our Working Process
+
+        {/* Heading */}
+        <div className="text-center mb-20">
+          <p className="text-[#60a5fa] font-semibold tracking-widest uppercase">
+            Work Process
+          </p>
+
+          <h2 className="text-4xl md:text-5xl font-bold mt-3">
+            How We Work
           </h2>
+
+          <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-cyan-400 mx-auto mt-6 rounded-full"></div>
         </div>
 
-        <div className="flex flex-wrap -mx-4">
+        {/* Cards */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+
           {workSteps.map((step) => (
             <div
               key={step.number}
-              className="w-full md:w-1/2 lg:w-1/3 px-4 mb-8"
               data-aos="fade-up"
+              className="relative group"
             >
-              <div className="group relative p-6 rounded-lg border border-[#0f172a] shadow-lg bg-white">
-                {/* Step Number with Hover Animation */}
-                <div
-                  className={`flex items-center justify-center w-12 h-12 text-white rounded-full absolute top-[-1.5rem] left-20 transform -translate-x-[150%] group-hover:-translate-x-1/2 transition-all duration-500 ease-in-out ${step.color}`}
-                >
-                  <span className="text-xl font-bold">{step.number}</span>
+              {/* glow background */}
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-cyan-400/20 blur-xl opacity-0 group-hover:opacity-100 transition duration-500 rounded-3xl"></div>
+
+              {/* card */}
+              <div className="relative backdrop-blur-xl bg-white/5 border border-white/10 rounded-3xl p-10 shadow-2xl transition-all duration-500 group-hover:-translate-y-4 group-hover:scale-[1.03]">
+
+                {/* step circle */}
+                <div className="absolute -top-7 left-1/2 -translate-x-1/2">
+                  <div className="w-14 h-14 rounded-full bg-gradient-to-r from-blue-500 to-cyan-400 flex items-center justify-center text-lg font-bold shadow-lg shadow-blue-500/40">
+                    {step.number}
+                  </div>
                 </div>
 
-                <div className="mt-12 text-center h-40">
-                  <h3 className="text-xl font-semibold text-[#0f172a]">
+                {/* content */}
+                <div className="pt-10 text-center">
+                  <h3 className="text-xl font-semibold mb-3">
                     {step.title}
                   </h3>
-                  <p className="text-gray-700 mt-2">{step.description}</p>
+
+                  <p className="text-gray-300 text-sm leading-relaxed">
+                    {step.description}
+                  </p>
                 </div>
+
               </div>
             </div>
           ))}
+
         </div>
       </div>
     </section>

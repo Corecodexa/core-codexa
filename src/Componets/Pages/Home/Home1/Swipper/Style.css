@@ -1,19 +1,25 @@
+/* Navigation Arrows Color */
 .swiper-button-next:after,
-.swiper-rtl {
-  color: #008bd0;
-}
-.swiper-button-prev:after,
-.swiper-rtl {
-  color: #008bd0;
+.swiper-button-prev:after {
+  color: #008bd0; /* custom cyan-blue color */
+  font-size: 1.5rem; /* optional: slightly bigger arrows */
+  transition: 0.3s;
 }
 
+.swiper-button-next:hover:after,
+.swiper-button-prev:hover:after {
+  color: #00C4FF; /* hover highlight */
+  text-shadow: 0 0 10px #00C4FF;
+}
+
+/* Hide Arrows on Small Screens */
 @media screen and (max-width: 768px) {
   .swiper-button-next:after,
-  .swiper-rtl {
+  .swiper-button-prev:after {
     display: none;
   }
-  .swiper-button-prev:after,
-  .swiper-rtl {
-    display: none;
-  }
+}
+.swiper-slide {
+  transition-timing-function: ease-in-out !important;
+  will-change: opacity;
 }
