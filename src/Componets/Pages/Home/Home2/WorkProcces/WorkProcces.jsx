@@ -54,13 +54,11 @@ const WorkProcess = () => {
               data-aos="fade-up"
               className="relative group"
             >
-              {/* glow background */}
               <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-cyan-400/20 blur-xl opacity-0 group-hover:opacity-100 transition duration-500 rounded-3xl"></div>
 
               {/* card */}
               <div className="relative backdrop-blur-xl bg-white/5 border border-white/10 rounded-3xl p-10 shadow-2xl transition-all duration-500 group-hover:-translate-y-4 group-hover:scale-[1.03]">
 
-                {/* step circle */}
                 <div className="absolute -top-7 left-1/2 -translate-x-1/2">
                   <div className="w-14 h-14 rounded-full bg-gradient-to-r from-blue-500 to-cyan-400 flex items-center justify-center text-lg font-bold shadow-lg shadow-blue-500/40">
                     {step.number}
