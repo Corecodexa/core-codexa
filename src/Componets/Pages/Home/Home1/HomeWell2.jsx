@@ -25,13 +25,12 @@ const HomeWell2 = () => {
         aria-hidden="true"
       ></div>
 
-      {/* Content */}
       <div
         className="relative z-10 w-full max-w-4xl flex flex-col items-center justify-center space-y-6 md:space-y-8"
         data-aos="fade-down-right"
       >
         <h1 className="text-3xl md:text-4xl lg:text-5xl text-white font-bold px-4 md:px-10 drop-shadow-lg">
-          We Provide Best<span className="text-[#4b6aa8]">Technology Solutions</span>
+          We Provide Best <span className="text-[#4b6aa8]">Technology Solutions</span>
 
         </h1>
 
